@@ -11,7 +11,8 @@ services:
     working_dir: /app
     volumes:
       - ..:/app
-    image: serverless
+    # please change to your project name
+    image: serverless-your-project-name
     # please change to your project name
     container_name: serverless-your-project-name
     env_file:

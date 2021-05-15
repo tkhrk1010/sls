@@ -14,7 +14,7 @@ Docker for ServerlessFramework
 
     ※ confirm .env is added in .gitignore
 
-5.  change container_name: serverless-your-project-name in docker-compose.yml
+5.  change your-project-name in docker-compose.yml
    
 6.  execute "$make build" and "$make up"
 
