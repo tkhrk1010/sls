@@ -2,11 +2,13 @@
 Docker for ServerlessFramework
 
 # How to use
+0. cd to your serverless project
+   
 1. clone this
 
-2. create .env and add credential
+2. create .env and write credential
       
-    There is sample env-sample
+    copy env-sample and replace name and credential
 
     ※ confirm .env is added in .gitignore
 

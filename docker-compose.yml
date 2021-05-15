@@ -1,4 +1,5 @@
-version: '3.5'
+# please copy this file to your project directory
+version: '3'
 services:
   serverless:
     build: 
@@ -8,8 +9,9 @@ services:
         - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
     # keep container up (docker run -t)
     tty: true
-    # attach STDIN of container (docker run -i)
-    stdin_open: true
+    working_dir: /app
+    volumes:
+      - ..:/app
     image: serverless
     container_name: serverless
     env_file:
