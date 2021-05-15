@@ -2,21 +2,23 @@
 Docker for ServerlessFramework
 
 # How to use
-0. cd to your serverless project
-   
-1. clone this
+1. go to your serverless project directory
 
-2. create .env and write credential
+2. git clone this repository
+
+3. go to sls/
+   
+4. create .env, and write aws credential
       
     copy env-sample and replace name and credential
 
     ※ confirm .env is added in .gitignore
 
-3. $make up
+5.  execute "$make build" and "$make up"
 
-    container "serverless" will be built and start
+    container: "serverless" will be built and start
 
-4. In the project directory, use sls command
+6. go back to the project directory, use sls command
 
     ex)
     $ docker container exec serverless sls -v

@@ -1,4 +1,4 @@
 # AWS keys
-# これをコピーして、.envファイルを作成する
+# .envファイルを作成し、以下をコピー
 AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY>
 AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>

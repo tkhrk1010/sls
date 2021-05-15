@@ -15,6 +15,10 @@ down: ## ServerlessFrameworkを終了する
 
 rebuild: down build up ## コンテナをrebulidする
 
+ls: ## コンテナの起動確認
+	@printf '\033[34m%s\033[m\n' 'docker container ls'
+	@docker container ls
+
 test: ## slsの起動確認
 	@printf '\033[34m%s\033[m\n' 'sls -v'
 	@docker container exec serverless sls -v
