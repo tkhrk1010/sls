@@ -1,22 +1,23 @@
-FROM python:3.6
+# references
+# https://github.com/jch254/docker-node-serverless
+FROM node:12-alpine
 ARG AWS_ACCESS_KEY_ID
 ARG AWS_SECRET_ACCESS_KEY
 
-# update apt-get
-RUN apt-get update -y && apt-get upgrade -y
+RUN apk add --no-cache \
+  python \
+  py-pip \
+  py-setuptools \
+  ca-certificates \
+  groff \
+  less \
+  bash && \
+  pip install --no-cache-dir --upgrade pip awscli
 
-# Install Nodejs 12
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
-RUN apt-get install -y nodejs
+ENV NODE_ENV development
 
-# install aws-cli
-RUN pip install awscli
-
-# install boto3
-RUN pip install boto3
-
-# install serverless framework
-RUN npm install -g serverless
+RUN npm install -g npm@latest \
+  && npm install -g serverless@2.8.0
 
 # set aws key 
 RUN sls config credentials --provider aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
