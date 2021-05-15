@@ -1,4 +1,3 @@
-# please copy this file to your project directory
 version: '3'
 services:
   serverless:
@@ -13,6 +12,7 @@ services:
     volumes:
       - ..:/app
     image: serverless
-    container_name: serverless
+    # please change to your project name
+    container_name: serverless-your-project-name
     env_file:
       - .env

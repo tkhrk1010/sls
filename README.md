@@ -14,11 +14,13 @@ Docker for ServerlessFramework
 
     ※ confirm .env is added in .gitignore
 
-5.  execute "$make build" and "$make up"
+5.  change container_name: serverless-your-project-name in docker-compose.yml
+   
+6.  execute "$make build" and "$make up"
 
     container: "serverless" will be built and start
 
-6. go back to the project directory, use sls command
+7. go back to the project directory, use sls command
 
     ex)
     $ docker container exec serverless sls -v
