@@ -1,10 +1,12 @@
 # 1. copy this file in your project root
-# 3. change the image and container_name
+# 2. change dockerfile, image, and container_name
 version: '3'
 services:
   serverless:
     build: 
       context: .
+      # change from "." to "./sls/Dockerfile"
+      dockerfile: .
       args: 
         - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
         - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
@@ -13,9 +15,9 @@ services:
     working_dir: /app
     volumes:
       - .:/app
-    # please change from selerless to serverless-<YOUR_PROJECT_NAME>
+    # change from "selerless" to "serverless-<YOUR_PROJECT_NAME>"
     image: serverless
-    # please change from selerless to serverless-<YOUR_PROJECT_NAME>
+    # change from "selerless" to "serverless-<YOUR_PROJECT_NAME>"
     container_name: serverless
     env_file:
       - .env
