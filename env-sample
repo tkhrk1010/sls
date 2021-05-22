@@ -1,4 +1,7 @@
+# 1. create ".env"
+# 2. add ".env" to ".gitignore"
+# 3. copy below and paste in ".env"
+
 # AWS keys
-# .envファイルを作成し、以下をコピー
 AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY>
 AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>

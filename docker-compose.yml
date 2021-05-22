@@ -1,3 +1,5 @@
+# 1. copy this file in your project root
+# 3. change the image and container_name
 version: '3'
 services:
   serverless:
@@ -10,10 +12,10 @@ services:
     tty: true
     working_dir: /app
     volumes:
-      - ..:/app
-    # please change to your project name
-    image: serverless-your-project-name
-    # please change to your project name
-    container_name: serverless-your-project-name
+      - .:/app
+    # please change from selerless to serverless-<YOUR_PROJECT_NAME>
+    image: serverless
+    # please change from selerless to serverless-<YOUR_PROJECT_NAME>
+    container_name: serverless
     env_file:
       - .env

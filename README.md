@@ -1,31 +1,46 @@
 # sls
 Docker for ServerlessFramework
 
+image size is 419MB
+
 # How to use
-1. go to your serverless project directory
+1. go to your serverless project root
 
 2. git clone this repository
-
-3. go to sls/
    
-4. create .env, and write aws credential
+3. create .env, and write aws credential
       
     copy env-sample and replace name and credential
 
-    ※ confirm .env is added in .gitignore
+    ※ confirm .env is added in .gitignore 
 
-5.  change your-project-name in docker-compose.yml
+4.  copy docker-compose.yml to your project root
+    
+    change your-project-name in copied docker-compose.yml
+
+5. execute "$ docker-compose up -d serverless-YOUR_PROJECT_NAME" and start sls
    
-6.  execute "$make build" and "$make up"
+6. use sls command
+
+    ex)
+
+    $ docker container exec serverless sls -v
+
+    $ docker container exec serverless sls deploy
+
+
+# How to test
+1.  in sls/, execute "$ make up"
 
     container: "serverless" will be built and start
 
-7. go back to the project directory, use sls command
+2. in sls/, execute "$ make test"
 
-    ex)
-    $ docker container exec serverless sls -v
-    $ docker container exec serverless sls deploy
+    if serverless version is displayed, it works.
 
+3. in sls/, execute "$ make down"
+
+    stop the container
 
 # References
 https://qiita.com/seiichi_akiba/items/d42bda576f3fc6ac5117
