@@ -16,7 +16,7 @@ image size is 419MB
 
 4.  copy docker-compose.yml to your project root
     
-    change your-project-name in copied docker-compose.yml
+    change some content in copied docker-compose.yml according to comment
 
 5. execute "$ docker-compose up -d serverless-YOUR_PROJECT_NAME" and start sls
    
