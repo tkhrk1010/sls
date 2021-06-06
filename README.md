@@ -28,6 +28,10 @@ image size is 419MB
 
     $ docker container exec serverless sls deploy
 
+7. before commit, delete this .git  
+    $ cd sls  
+    $ rm -rf .git  
+8. git add and commit
 
 # How to test
 1.  in sls/, execute "$ make up"
